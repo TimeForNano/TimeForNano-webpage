@@ -138,10 +138,6 @@ body {
 	.col-sm-12 {
 		width: 100%;
 	}
-
-	.nav-header {
-		text-align: center;
-	}
 }
 
 /* Medium devices col-md (landscape tablets, 768px and up) */
@@ -320,6 +316,7 @@ body {
 	/* nav header top*/
 	color: #FFF;
 	font-size: x-large;
+	text-align: center;
 }
 
 /* dropdown action */
@@ -504,12 +501,46 @@ button:hover {
 	align-items: center;
 }
 
+/* anchor thumbnails */
+.thumbnail {
+	position: center center;
+	max-width: 300px;
+	max-height: 300px;
+	margin-left: 20px;
+	margin-right: 20px;
+	float:left;
+}
+
 /*main*/
 .main {
 	text-align: center;
 	margin: auto;
 }
 
+/* resume */
+.resume-header {
+	/* resume header top*/
+	color: #000;
+	font-size: x-large;
+	text-align: center;
+}
+
+.resumerow {
+	text-align: center;
+}
+
+/* blog */
+/* contact */
+/* links */
+.contact a:hover, .resumerow a:hover {
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.contact a, .resumerow a {
+	color: #000;
+	display: inline;
+}
 /*footer*/
 .footer {
 	background-color: #222;
@@ -521,8 +552,6 @@ button:hover {
 	font-size: medium;
 	color: white;
 }
-
-
 
 .footer a,
 p:link {
