@@ -1,0 +1,546 @@
+/* main */
+body {
+	/* placeholder color, the main picture has white text, so in case of image fail the text would still show with a darker background */
+	background-color: lightgrey;
+	margin: 0;
+}
+
+/* columns and breakpoints below */
+* {
+	/* "border-box" = The width and height properties (and min/max properties) includes content, padding and border */
+	box-sizing: border-box;
+}
+
+/* floats columns next to each other, allowing col-12 in a row */
+[class*="col-"] {
+	/* selects all classes including "col-" substring, as long as its inside the class, but " col-" with space needs that space style or it wont cound. "b-col-" does not work */
+	float: left;
+	padding: 15px;
+}
+
+/* new row under floated elements (col-) */
+.row::after {
+	/* The ::after selector inserts something after the content of each selected element(s). */
+	content: "";
+	clear: both;
+	/* The element is pushed below both left and right floated elements. Practically starting new "row" on the website */
+	display: table;
+	/* Let the element behave like a <table> element, meaning it is a row that can have columns and more rows --> grid system with col- spacing things out */
+}
+
+/* responsiveness */
+/* The @media rule is used in media queries to apply different styles for different media types/devices. Width and height of the viewport or device. Orientation (is the tablet/phone in landscape or porttrait mode?). resolution */
+/* Extra small devices col (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+	.col-0 {
+		visibility: hidden;
+	}
+
+	.col-1 {
+		width: 8.33%;
+	}
+
+	.col-2 {
+		width: 16.66%;
+	}
+
+	.col-3 {
+		width: 25%;
+	}
+
+	.col-4 {
+		width: 33.33%;
+	}
+
+	.col-5 {
+		width: 41.66%;
+	}
+
+	.col-6 {
+		width: 50%;
+	}
+
+	.col-7 {
+		width: 58.33%;
+	}
+
+	.col-8 {
+		width: 66.66%;
+	}
+
+	.col-9 {
+		width: 75%;
+	}
+
+	.col-10 {
+		width: 83.33%;
+	}
+
+	.col-11 {
+		width: 91.66%;
+	}
+
+	.col-12 {
+		width: 100%;
+	}
+}
+
+/* Small devices col-sm (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+	.col-sm-0 {
+		visibility: hidden;
+	}
+
+	.col-sm-1 {
+		width: 8.33%;
+	}
+
+	.col-sm-2 {
+		width: 16.66%;
+	}
+
+	.col-sm-3 {
+		width: 25%;
+	}
+
+	.col-sm-4 {
+		width: 33.33%;
+	}
+
+	.col-sm-5 {
+		width: 41.66%;
+	}
+
+	.col-sm-6 {
+		width: 50%;
+	}
+
+	.col-sm-7 {
+		width: 58.33%;
+	}
+
+	.col-sm-8 {
+		width: 66.66%;
+	}
+
+	.col-sm-9 {
+		width: 75%;
+	}
+
+	.col-sm-10 {
+		width: 83.33%;
+	}
+
+	.col-sm-11 {
+		width: 91.66%;
+	}
+
+	.col-sm-12 {
+		width: 100%;
+	}
+
+	.nav-header {
+		text-align: center;
+	}
+}
+
+/* Medium devices col-md (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.col-md-0 {
+		visibility: hidden;
+	}
+
+	.col-md-1 {
+		width: 8.33%;
+	}
+
+	.col-md-2 {
+		width: 16.66%;
+	}
+
+	.col-md-3 {
+		width: 25%;
+	}
+
+	.col-md-4 {
+		width: 33.33%;
+	}
+
+	.col-md-5 {
+		width: 41.66%;
+	}
+
+	.col-md-6 {
+		width: 50%;
+	}
+
+	.col-md-7 {
+		width: 58.33%;
+	}
+
+	.col-md-8 {
+		width: 66.66%;
+	}
+
+	.col-md-9 {
+		width: 75%;
+	}
+
+	.col-md-10 {
+		width: 83.33%;
+	}
+
+	.col-md-11 {
+		width: 91.66%;
+	}
+
+	.col-md-12 {
+		width: 100%;
+	}
+}
+
+/* Large devices col-lg (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.col-lg-0 {
+		visibility: hidden;
+	}
+
+	.col-lg-1 {
+		width: 8.33%;
+	}
+
+	.col-lg-2 {
+		width: 16.66%;
+	}
+
+	.col-lg-3 {
+		width: 25%;
+	}
+
+	.col-lg-4 {
+		width: 33.33%;
+	}
+
+	.col-lg-5 {
+		width: 41.66%;
+	}
+
+	.col-lg-6 {
+		width: 50%;
+	}
+
+	.col-lg-7 {
+		width: 58.33%;
+	}
+
+	.col-lg-8 {
+		width: 66.66%;
+	}
+
+	.col-lg-9 {
+		width: 75%;
+	}
+
+	.col-lg-10 {
+		width: 83.33%;
+	}
+
+	.col-lg-11 {
+		width: 91.66%;
+	}
+
+	.col-lg-12 {
+		width: 100%;
+	}
+}
+
+/* Extra large devices col-xl (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.col-xl-0 {
+		visibility: hidden;
+	}
+
+	.col-xl-1 {
+		width: 8.33%;
+	}
+
+	.col-xl-2 {
+		width: 16.66%;
+	}
+
+	.col-xl-3 {
+		width: 25%;
+	}
+
+	.col-xl-4 {
+		width: 33.33%;
+	}
+
+	.col-xl-5 {
+		width: 41.66%;
+	}
+
+	.col-xl-6 {
+		width: 50%;
+	}
+
+	.col-xl-7 {
+		width: 58.33%;
+	}
+
+	.col-xl-8 {
+		width: 66.66%;
+	}
+
+	.col-xl-9 {
+		width: 75%;
+	}
+
+	.col-xl-10 {
+		width: 83.33%;
+	}
+
+	.col-xl-11 {
+		width: 91.66%;
+	}
+
+	.col-xl-12 {
+		width: 100%;
+	}
+}
+
+/* navigation */
+.navrow {
+	/* entire nav div top*/
+	background-color: #222;
+
+}
+
+.nav-header {
+	/* nav header top*/
+	color: #FFF;
+	font-size: x-large;
+}
+
+/* dropdown action */
+.dropbtn {
+	background-color: #FFF;
+	color: black;
+	padding: 0px 5px;
+	font-size: 16px;
+	border: none;
+
+}
+
+.dropdown {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 30px 10px;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	right: 0;
+	background-color: #fff;
+	min-width: 100px;
+	margin-right: 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	text-align: right;
+	padding: 12px 10px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: lightskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+
+}
+
+.dropdown:hover .dropbtn {
+	background-color: lightskyblue;
+}
+
+/* active page*/
+.active {
+	color: #000;
+	background-color: lightskyblue;
+	cursor: default;
+}
+
+/* picture */
+.picturehome {
+	background-image: url(images/techbackground.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 300px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+}
+
+.jumbotron h1 {
+	text-align: center;
+	color: lightskyblue;
+	font-size: xx-large;
+}
+
+.jumbotron p {
+	text-align: center;
+	color: #000;
+}
+
+.pictureresume {
+	background-image: url(images/programming.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 300px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.jumbotronres h1 {
+	text-align: center;
+	color: lightskyblue;
+	font-size: xx-large;
+}
+
+.jumbotronres p {
+	text-align: center;
+	color: #FFF;
+}
+
+.pictureblog {
+	background-image: url(images/keyboard.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 300px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.jumbotronblog h1 {
+	text-align: center;
+	color: lightskyblue;
+	font-size: xx-large;
+}
+
+.jumbotronblog p {
+	text-align: center;
+	color: #FFF;
+}
+
+.picturecontact {
+	background-image: url(images/calendar.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: gray;
+	min-height: 300px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.jumbotroncon h1 {
+	text-align: center;
+	color: lightskyblue;
+	font-size: xx-large;
+}
+
+.jumbotroncon p {
+	text-align: center;
+	color: #000;
+}
+
+/*anchors*/
+.anchor h2 {
+	text-align: center;
+}
+
+.anchor a,
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+/* anchor button */
+.read {
+	border-style: groove;
+	border-color: black;
+	padding: 3px;
+}
+
+button:hover {
+	background-color: lightskyblue;
+}
+
+.anchor p,
+.anchor h2 {
+	align-items: center;
+}
+
+/*main*/
+.main {
+	text-align: center;
+	margin: auto;
+}
+
+/*footer*/
+.footer {
+	background-color: #222;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-height: 2em;
+	font-size: medium;
+	color: white;
+}
+
+
+
+.footer a,
+p:link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: lightskyblue;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.footer a:active {
+	color: purple;
+	text-decoration: underline;
+}
+
+.padbottom {
+	padding: 40px;
+}
