@@ -535,6 +535,13 @@ button:hover {
 }
 
 /* blog */
+.blog {
+	background-color: whitesmoke;
+	border-radius: 10px;
+	margin-top: 20px;
+	box-shadow: 5px 5px #000;
+	
+}
 /* contact */
 /* links */
 .contact a:hover, .resumerow a:hover {
