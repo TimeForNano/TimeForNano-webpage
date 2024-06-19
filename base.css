@@ -490,10 +490,12 @@ a:link {
 	border-style: groove;
 	border-color: black;
 	padding: 3px;
+	margin-left: 20px;
 }
 
 button:hover {
 	background-color: lightskyblue;
+	cursor: pointer;
 }
 
 .anchor p,
@@ -503,11 +505,14 @@ button:hover {
 
 /* anchor thumbnails */
 .thumbnail {
-	position: center center;
 	max-width: 300px;
-	max-height: 300px;
 	margin-left: 20px;
 	margin-right: 20px;
+	float:left;
+}
+
+.thumbnailp {
+	margin-left: 20px;
 	float:left;
 }
 
